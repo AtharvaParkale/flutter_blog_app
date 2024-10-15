@@ -1,9 +1,9 @@
+import 'package:blog_app/features/auth/domain/entities/user.dart';
 import 'package:blog_app/features/auth/domain/usecases/user_sign_up.dart';
+import 'package:blog_app/features/auth/presentation/bloc/auth_event.dart';
+import 'package:blog_app/features/auth/presentation/bloc/auth_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 
-part 'auth_event.dart';
-part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final UserSignUp _userSignUp;
@@ -34,9 +34,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 
   void _emitAuthSuccess(
-    String uid,
+    User user,
     Emitter<AuthState> emit,
   ) {
-    emit(AuthSuccess(uid));
+    emit(AuthSuccess(user));
   }
 }

@@ -1,6 +1,5 @@
-part of 'auth_bloc.dart';
+import 'package:blog_app/features/auth/domain/entities/user.dart';
 
-@immutable
 abstract class AuthState {}
 
 final class AuthInitial extends AuthState {}
@@ -8,8 +7,9 @@ final class AuthInitial extends AuthState {}
 final class AuthLoading extends AuthState {}
 
 final class AuthSuccess extends AuthState {
-  final String uid;
-  AuthSuccess(this.uid);
+  final User user;
+
+  AuthSuccess(this.user);
 }
 
 final class AuthFailure extends AuthState {
