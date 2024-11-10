@@ -25,6 +25,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         _appUserCubit = appUserCubit,
         super(AuthInitial()) {
     on<AuthEvent>((_, emit) => emit(AuthLoading()));
+    // The above line specifies, if you get any type of event just auth loading
     on<AuthSignUp>(_onAuthSignUp);
     on<AuthLogin>(_onAuthLogin);
     on<AuthIsUserLoggedIn>(_isUserLoggedIn);
