@@ -10,8 +10,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BlogPage extends StatefulWidget {
   static route() => MaterialPageRoute(
-    builder: (context) => const BlogPage(),
-  );
+        builder: (context) => const BlogPage(),
+      );
   const BlogPage({super.key});
 
   @override
@@ -29,7 +29,7 @@ class _BlogPageState extends State<BlogPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Blog App'), //Title
+        title: const Text('Blog App'),
         actions: [
           IconButton(
             onPressed: () {

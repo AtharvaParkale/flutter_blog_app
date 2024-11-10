@@ -18,7 +18,6 @@ class AddNewBlogPage extends StatefulWidget {
   static route() => MaterialPageRoute(
         builder: (context) => const AddNewBlogPage(),
       );
-
   const AddNewBlogPage({super.key});
 
   @override

@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 
 class BlogViewerPage extends StatelessWidget {
   static route(Blog blog) => MaterialPageRoute(
-    builder: (context) => BlogViewerPage(
-      blog: blog,
-    ),
-  );
+        builder: (context) => BlogViewerPage(
+          blog: blog,
+        ),
+      );
   final Blog blog;
   const BlogViewerPage({
     super.key,
